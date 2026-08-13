@@ -11,3 +11,6 @@ Repositorio del curso de Métodos Estadísticos Agosto 2026
 :smiley_cat:
 
 --
+
+uogvuuugvb
+--- xd

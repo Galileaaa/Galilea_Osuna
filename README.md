@@ -14,3 +14,5 @@ Repositorio del curso de Métodos Estadísticos Agosto 2026
 
 uogvuuugvb
 --- xd
+:b
+:trollface:

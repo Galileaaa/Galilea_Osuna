@@ -6,3 +6,8 @@ Repositorio del curso de Métodos Estadísticos Agosto 2026
 #Modificar el archivo_README_
 #Crear cuenta de Github "Galileaaa"
 3
+
+:smile_cat:
+:smiley_cat:
+
+--

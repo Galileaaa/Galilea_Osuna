@@ -5,7 +5,7 @@
 Datos <- read.csv("erupciones_1.csv", header= TRUE)
 
 # Gráfica de disperción
-plot (Datos$waiting, erupciones$eruptions,
+plot (Datos$waiting, Datos$eruptions,
       xlab ="Tiempo de espera (min)",
       ylab ="Duración de la erupción (min)",
       pch = 19, col = "pink")
@@ -30,8 +30,8 @@ cor.test(Datos$waiting,Datos$eruptions)
 # si es estadísticamente significativa. 
 
 # Regresión lineal 
-Datos <- lm(eruptions ~ waiting, data = Datos)
-summary(Datos)
+Datos2 <- lm(Datos$eruptions ~ Datos$waiting)
+summary(Datos2)
 # establecer la hipótesis nula
 # Se rechaza la hipótesis nula de que la correlación es cero, pues p < 0.05
 
@@ -45,7 +45,7 @@ summary(Datos)
 # 0.075628
 
 # Realizar un análisis de regresión
-plot (erupciones$waiting, erupciones$eruptions,
+plot(Datos$waiting, Datos$eruptions,
       xlab ="Tiempo de espera (min)",
       ylab ="Duración de la erupción (min)",
       main = "Regresión lineal simple",
@@ -55,27 +55,24 @@ plot (erupciones$waiting, erupciones$eruptions,
 # como p-value es un número significativamente parecido a 0, se rechaza la hipotesís nula. Osea, es estadisticamente significativa.
 
 #¿Cuál será la duración en minutos de la proxima erupción?
-datos_2 <- c(80, 40, 45, 53, 61)
-duraciones_predichas <- -1.874016 + 0.075628* datos_2
+Datos3 <- c(80, 40, 45, 53, 61)
+duraciones_predichas <- -1.874016 + 0.075628* Datos3
 duraciones_predichas
-# Estimar el valor de y prima para los valores de x dados
-Datos$yprima <- modelo$fitted.values
-head(Datos)
 
 
 
 #Ejercicio 2
-Datos <- read.csv("datos_control_Rascon.csv", header= TRUE)
+Datos4 <- read.csv("datos_control_Rascon.csv", header= TRUE)
 
 # Gráfica de disperción
-plot (Datos$EDAD, Datos$DAP,
+plot (Datos4$EDAD, Datos4$DAP,
       xlab ="Edad del árbol (años)",
       ylab ="DAP (cm)",
       main = "Relación entre Edad y DAP",
       pch = 19, col = "deeppink")
 
 # Regresión lineal
-modelo2 <- lm(DAP ~ EDAD, data = Datos)
+modelo2 <- lm(Datos4$DAP ~ Datos4$EDAD)
 summary(modelo2)
 abline(modelo2, col = "deeppink3", lwd = 2)
 
@@ -92,7 +89,7 @@ abline(modelo2, col = "deeppink3", lwd = 2)
 # 0.26013
 
 #Realizar un análisis de regresión 
-plot (Datos$EDAD,Datos$DAP,
+plot (Datos4$EDAD,Datos4$DAP,
       xlab ="Edad del árbol (años)",
       ylab ="DAP (cm)",
       main = "Relación entre Edad y DAP",
